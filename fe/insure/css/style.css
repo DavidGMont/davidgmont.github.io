@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+a {
+  color: hsl(273deg, 4%, 51%);
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+ul li {
+  padding: 5px 0;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+  background-color: hsl(256deg, 25%, 20%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+header nav {
+  display: none;
+}
+header i {
+  padding: 5px;
+  border: 1px solid hsl(256deg, 25%, 20%);
+}
+
+main section:nth-child(odd) {
+  background-color: hsl(256deg, 25%, 20%);
+  color: white;
+}
+main section:nth-child(odd) article {
+  padding: 100px 10px 90px;
+  background-image: url("../img/bg-pattern-intro-left-mobile.svg");
+  background-repeat: no-repeat;
+}
+main section:nth-child(odd) article > p {
+  margin: 20px 0 40px;
+}
+main section div img {
+  width: 100%;
+}
+main section:nth-child(even) {
+  padding: 140px 25px;
+}
+main section:nth-child(even) > article:nth-child(4) {
+  margin: 60px 0;
+}
+main section hr {
+  border: 1px solid #b5a4b6;
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+main section > h2 {
+  margin-bottom: 80px;
+  letter-spacing: normal;
+}
+main section i {
+  font-size: 2rem;
+  padding: 25px;
+  width: 82px;
+  border-radius: 100%;
+  background-color: hsl(216deg, 30%, 68%);
+  color: white;
+}
+main section h4 {
+  margin: 40px 0px 25px;
+}
+main section:nth-child(3) {
+  margin-inline: 25px;
+  padding: 75px 30px 70px;
+  margin-bottom: 140px;
+  background-image: url("../img/bg-pattern-how-we-work-mobile.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+main section:nth-child(3) > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+footer {
+  background-image: url("../img/bg-pattern-footer-mobile.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-color: hsl(0deg, 0%, 98%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 80px 25px;
+  display: flex;
+  flex-direction: column;
+}
+footer div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+}
+footer div span {
+  display: inline-block;
+}
+footer div span i {
+  font-size: 1.5rem;
+  margin: 30px 5px 40px;
+}
+footer div p {
+  margin: 2rem 0;
+  color: hsl(273deg, 4%, 51%);
+}
+
+@media screen and (min-width: 769px) {
+  html {
+    text-align: left;
+  }
+  header {
+    align-items: center;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav ul li {
+    margin-inline: 12px;
+  }
+  header > i.fa-solid {
+    display: none;
+  }
+  main section:nth-child(1) {
+    height: 600px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 100px 160px;
+  }
+  main section:nth-child(1) div {
+    width: max-content;
+    display: inline-block;
+  }
+  main section:nth-child(1) article {
+    width: 50%;
+    padding-left: 0;
+  }
+  main section:nth-child(2) {
+    margin-inline: 160px;
+    padding-inline: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main section:nth-child(2) h2 {
+    width: 100%;
+  }
+  main section:nth-child(2) > article {
+    display: inline-block;
+    width: calc(33.3333333333% - 10px);
+    margin: 0;
+  }
+  main section:nth-child(3) {
+    margin-inline: 160px;
+    padding: 0 80px;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+  main section:nth-child(3) > h2 {
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    max-width: 520px;
+  }
+  footer {
+    margin-inline: 160px;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  footer div:nth-child(1) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */

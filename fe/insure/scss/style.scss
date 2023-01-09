@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+$DViolet: hsl(256, 25%, 20%);
+$VDViolet: hsl(270, 9%, 17%);
+$GBlue: hsl(216, 30%, 68%);
+$GViolet: hsl(273, 4%, 51%);
+$LGrey: hsl(0, 0%, 98%);
+$TKarla: "Karla", sans-serif;
+$TSerif: "DM Serif Display", serif;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	font-family: $TKarla;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+}
+
+a {
+	color: $GViolet;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+	li {
+		padding: 5px 0;
+	}
+}
+
+h2,
+h3,
+h4 {
+	font-family: $TSerif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+button {
+	padding: 1rem 2rem;
+	border: 2px solid white;
+	cursor: pointer;
+	color: white;
+	background-color: $DViolet;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+header {
+	padding: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	nav {
+		display: none;
+	}
+	i {
+		padding: 5px;
+		border: 1px solid $DViolet;
+	}
+}
+
+main {
+	section {
+		&:nth-child(odd) {
+			background-color: $DViolet;
+			color: white;
+			article {
+				padding: 100px 10px 90px;
+				background-image: url("../img/bg-pattern-intro-left-mobile.svg");
+				background-repeat: no-repeat;
+				> p {
+					margin: 20px 0 40px;
+				}
+			}
+		}
+		div {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	section {
+		&:nth-child(even) {
+			padding: 140px 25px;
+			> article {
+				&:nth-child(4) {
+					margin: 60px 0;
+				}
+			}
+		}
+		hr {
+			border: 1px solid #b5a4b6;
+			width: 150px;
+			display: inline-block;
+			margin-bottom: 40px;
+		}
+		> h2 {
+			margin-bottom: 80px;
+            letter-spacing: normal;
+		}
+		i {
+			font-size: 2rem;
+			padding: 25px;
+			width: 82px;
+			border-radius: 100%;
+			background-color: $GBlue;
+			color: white;
+		}
+		h4 {
+			margin: 40px 0px 25px;
+		}
+	}
+	section {
+		&:nth-child(3) {
+			margin-inline: 25px;
+			padding: 75px 30px 70px;
+			margin-bottom: 140px;
+			background-image: url("../img/bg-pattern-how-we-work-mobile.svg");
+			background-position: right top;
+			background-repeat: no-repeat;
+			> h2 {
+				font-size: 2.5rem;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+footer {
+	background-image: url("../img/bg-pattern-footer-mobile.svg");
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-color: $LGrey;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	padding: 80px 25px;
+	display: flex;
+	flex-direction: column;
+	div {
+		&:nth-child(1) {
+			display: flex;
+			flex-direction: column;
+			border-bottom: 1px solid #d9d9d9;
+			margin: 0;
+		}
+		span {
+			display: inline-block;
+			i {
+				font-size: 1.5rem;
+				margin: 30px 5px 40px;
+			}
+		}
+		p {
+			margin: 2rem 0;
+			color: $GViolet;
+		}
+	}
+}
+@media screen and (min-width: 769px) /* and (max-width: 1440px) */ {
+	html {
+		text-align: left;
+	}
+
+	header {
+		align-items: center;
+		nav {
+			display: flex;
+			align-items: center;
+			ul {
+				display: flex;
+				li {
+					margin-inline: 12px;
+				}
+			}
+		}
+		> i {
+			&.fa-solid {
+				display: none;
+			}
+		}
+	}
+
+	main {
+		section {
+			&:nth-child(1) {
+				height: 600px;
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+				padding: 100px 160px;
+				div {
+					width: max-content;
+					display: inline-block;
+				}
+				article {
+					width: 50%;
+					padding-left: 0;
+				}
+			}
+			&:nth-child(2) {
+				margin-inline: 160px;
+				padding-inline: 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				h2 {
+					width: 100%;
+				}
+				> article {
+					display: inline-block;
+					width: calc(100% / 3 - 10px);
+					margin: 0;
+				}
+			}
+			&:nth-child(3) {
+				margin-inline: 160px;
+				padding: 0 80px;
+				height: 250px;
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+				align-items: center;
+				> h2 {
+					margin-bottom: 0;
+					font-size: 3.5rem;
+					max-width: 520px;
+				}
+			}
+		}
+	}
+	footer {
+		margin-inline: 160px;
+		padding-left: 0;
+		padding-right: 0;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		div {
+			&:nth-child(1) {
+				width: 100%;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
+}
