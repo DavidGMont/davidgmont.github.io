@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Pensamientos</title>
+	</head>
+	<body>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<div id="app"></div>
+		<script>
+			const vm = Vue.createApp({
+				data() {
+					return {
+						username: "",
+						loggedIn: false,
+						title: "",
+						description: "",
+						date: new Date(),
+						posts: [],
+					};
+				},
+				methods: {
+					userAnalizer() {
+						if (this.loggedIn && this.username === "") this.username = "🕵️‍♂️";
+					},
+					time(Date) {
+						return (
+							Date.toLocaleDateString() + " @ " + Date.toLocaleTimeString()
+						);
+					},
+					descriptionAnalizer(string) {
+						if (string.trim().length > 0) {
+							return string.trim();
+						} else {
+							return "👻";
+						}
+					},
+					publishPost() {
+						this.posts.unshift({
+							title: this.title.trim(),
+							description: this.descriptionAnalizer(this.description),
+							date: this.time((this.date = new Date())),
+						});
+						this.title = "";
+						this.description = "";
+					},
+					removePost(i) {
+						this.posts.splice(i, 1);
+					},
+				},
+				watch: {
+					loggedIn() {
+						this.userAnalizer();
+						if (!this.loggedIn) this.username = "";
+						console.log(this.loggedIn, this.username);
+					},
+				},
+				template: `
+                    <section v-if="!loggedIn">
+                        <h1>Te doy la bienvenida 😄</h1>
+                        <form>
+                            <label for="username">Dame tu nombre</label>
+                            <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                required
+                                v-model="username"
+                            />
+                            <button type="button" @click="loggedIn = !loggedIn">Empezar</button>
+                        </form>
+                    </section>
+                    <section v-else>
+                        <h1>Hola, {{ username }}</h1>
+                        <form>
+                            <h2>¿Qué estás pensando?</h2>
+                            <label for="post-title"><i class="fa-solid fa-comment"></i> Título</label>
+                            <input
+                                type="text"
+                                name="post-title"
+                                id="post-title"
+                                v-model="title"
+                                />
+                            <label for="post-description"><i class="fa-solid fa-pencil"></i> Descripción</label>
+                            <textarea
+                                name="post-description"
+                                id="post-description"
+                                cols="30"
+                                rows="5"
+                                required
+                                placeholder="Escribe tus grandes ideas 🌈"
+                                v-model="description"
+                            ></textarea>
+                            <button type="button" @click="publishPost">Añadir</button>
+                        </form>
+                        <div>
+                            <article v-for="(item, i) in posts" :key="i">
+                                <h2>{{ item.title }}</h2>
+                                <p><i class="fa-solid fa-quote-left"></i> {{ item.description }}</p>
+                                <footer>
+                                    <p><i class="fa-solid fa-circle-user"></i> {{ username }}</p>
+                                    <p><i class="fa-regular fa-calendar-days"></i> {{ item.date }}</p>
+                                    <button type="button" class="remove" @click="removePost(i)">
+                                        <i class="fa-solid fa-circle-xmark"></i> 
+                                        Eliminar
+                                    </button>
+                                </footer>
+                            </article>
+                        </div>
+                        <button type="button" @click="loggedIn = !loggedIn">Salir</button>
+                    </section>
+                `,
+			}).mount("#app");
+		</script>
+		<style>
+			* {
+				margin: 0;
+				box-sizing: border-box;
+			}
+			:root {
+				--a-light: rgb(191, 191, 184);
+				--b-mid-light: rgb(164, 166, 156);
+				--c-medium: rgb(76, 89, 79);
+				--d-mid-dark: rgb(53, 64, 58);
+				--e-dark: rgb(35, 38, 37);
+				--image: url(https://images.unsplash.com/photo-1551120738-c3fcea8d0cf8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80);
+			}
+			:focus-visible {
+				outline-color: var(--c-medium);
+			}
+			html {
+				height: 100%;
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+					Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+					sans-serif;
+			}
+			body {
+				margin: 0 auto;
+				padding: 20px;
+				min-height: 100%;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				place-content: center;
+				align-items: center;
+				background: no-repeat var(--image) center / cover var(--e-dark) fixed;
+				color: var(--e-dark);
+				-webkit-backdrop-filter: blur(10px);
+				-moz-backdrop-filter: blur(6px);
+				backdrop-filter: blur(6px);
+			}
+			#app {
+				width: 100%;
+			}
+			@media screen and (min-width: 540px) {
+				#app {
+					width: 500px;
+				}
+			}
+			i {
+				color: var(--d-mid-dark);
+			}
+			section {
+				padding: 20px;
+				background-color: var(--a-light);
+				border-radius: 10px;
+			}
+			article {
+				padding: 10px;
+				border: var(--c-medium) 1px solid;
+				border-radius: 10px;
+				margin-top: 15px;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+			form > h2,
+			form > button {
+				flex-grow: 1;
+			}
+			label {
+				margin: 15px 0 10px;
+			}
+			input,
+			button,
+			textarea {
+				appearance: none;
+				font-family: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+				color: inherit;
+				border: none;
+				border-radius: 5px;
+			}
+			textarea {
+				resize: vertical;
+			}
+			button {
+				padding: 10px;
+				background-color: var(--d-mid-dark);
+				color: var(--a-light);
+				margin-top: 15px;
+				cursor: pointer;
+			}
+			.remove {
+				margin-top: 10px;
+				padding: 5px;
+				font-size: small;
+				background-color: #ebc8c8;
+				color: #a32941;
+				opacity: 0.75;
+			}
+			.remove > i {
+				color: #a32941;
+			}
+			footer {
+				margin-top: 5px;
+				padding-top: 5px;
+				border-top: 1px solid var(--b-mid-light);
+			}
+			section > button {
+				background-color: var(--b-mid-light);
+				color: var(--d-mid-dark);
+				width: 100%;
+			}
+		</style>
+	</body>
+</html>
