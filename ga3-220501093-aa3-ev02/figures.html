@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Calculadora de Perímetros y Áreas</title>
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+        <meta name="description" content="Calculadora de perímetro y área de figuras geométricas" />
+
+        <meta property="og:title" content="Calculadora de Perímetros y Áreas" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://davidgarmo.me/" />
+        <meta property="og:image" content="img/Figures.webp" />
+        <meta property="og:image:alt" content="Imagen de un cuadrado" />
+
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="icon.png" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <meta name="theme-color" content="#fafafa" />
+    </head>
+
+    <body>
+        <main class="container">
+            <nav aria-label="breadcrumb">
+                <ul>
+                    <li><a href="./index.html">Index</a></li>
+                    <li>Figuras Geométricas</li>
+                </ul>
+            </nav>
+            <h1>Calculadora de Perímetros y Áreas</h1>
+            <section>
+                <hgroup>
+                    <h2>¡Selecciona tu figura!</h2>
+                    <p>
+                        <span style="font-weight: bold">Nota:</span> los campos aceptan números
+                        positivos y enteros; su unidad de medida es en centímetros.
+                    </p>
+                </hgroup>
+                <div class="grid">
+                    <article>
+                        <header><h3>Triángulo</h3></header>
+                        <div style="text-align: center">
+                            <img src="img/Triangle.png" alt="Triángulo" />
+                        </div>
+                        <hr />
+                        <h4>Ingresa tus datos</h4>
+                        <form id="triangle-form">
+                            <fieldset>
+                                <label for="triangle-side-a">Lado (a)</label>
+                                <input
+                                    type="number"
+                                    id="triangle-side-a"
+                                    name="triangle-side-a"
+                                    placeholder="Ingresa un número"
+                                    aria-label="Lado A del triángulo" />
+                                <small id="triangle-side-a-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                                <label for="triangle-side-b">Lado (b)</label>
+                                <input
+                                    type="number"
+                                    id="triangle-side-b"
+                                    name="triangle-side-b"
+                                    placeholder="Ingresa un número"
+                                    aria-label="Lado B del triángulo" />
+                                <small id="triangle-side-b-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                                <label for="triangle-side-c">Lado (c)</label>
+                                <input
+                                    type="number"
+                                    id="triangle-side-c"
+                                    name="triangle-side-c"
+                                    placeholder="Ingresa un número"
+                                    aria-label="Lado C del triángulo" />
+                                <small id="triangle-side-c-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                                <label for="triangle-side-h">Altura (h)</label>
+                                <input
+                                    type="number"
+                                    id="triangle-side-h"
+                                    name="triangle-side-h"
+                                    placeholder="Ingresa un número"
+                                    aria-label="Altura del triángulo" />
+                                <small id="triangle-side-h-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                            </fieldset>
+                            <fieldset class="grid">
+                                <input type="reset" value="Limpiar" />
+                                <input type="submit" value="¡Calcular resultados!" disabled />
+                            </fieldset>
+                        </form>
+                        <footer>
+                            <form>
+                                <fieldset>
+                                    <label for="triangle-perimeter">Perímetro</label>
+                                    <input
+                                        type="text"
+                                        id="triangle-perimeter"
+                                        name="triangle-perimeter"
+                                        value="0 cm"
+                                        aria-label="Perímetro del triángulo"
+                                        readonly />
+                                    <small>Aquí aparecerá el perímetro del triángulo.</small>
+                                    <label for="triangle-area">Área</label>
+                                    <input
+                                        type="text"
+                                        id="triangle-area"
+                                        name="triangle-area"
+                                        value="0 cm²"
+                                        aria-label="Área del triángulo"
+                                        readonly />
+                                    <small>Aquí aparecerá el área del triángulo.</small>
+                                </fieldset>
+                            </form>
+                        </footer>
+                    </article>
+                    <article>
+                        <header><h3>Rectángulo</h3></header>
+                        <div style="text-align: center">
+                            <img src="img/Rectangle.png" alt="Rectángulo" />
+                        </div>
+                        <hr />
+                        <h4>Ingresa tus datos</h4>
+                        <form id="rectangle-form">
+                            <fieldset>
+                                <label for="rectangle-side-a">Lado (a)</label>
+                                <input
+                                    type="number"
+                                    id="rectangle-side-a"
+                                    name="rectangle-side-a"
+                                    placeholder="Ingresa un número"
+                                    required
+                                    aria-label="Lado A del rectángulo" />
+                                <small id="rectangle-side-a-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                                <label for="rectangle-side-b">Lado (b)</label>
+                                <input
+                                    type="number"
+                                    id="rectangle-side-b"
+                                    name="rectangle-side-b"
+                                    placeholder="Ingresa un número"
+                                    required
+                                    aria-label="Lado B del rectángulo" />
+                                <small id="rectangle-side-b-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                            </fieldset>
+                            <fieldset class="grid">
+                                <input type="reset" value="Limpiar" />
+                                <input type="submit" value="¡Calcular resultados!" disabled />
+                            </fieldset>
+                        </form>
+                        <footer>
+                            <form>
+                                <fieldset>
+                                    <label for="rectangle-perimeter">Perímetro</label>
+                                    <input
+                                        type="text"
+                                        id="rectangle-perimeter"
+                                        name="rectangle-perimeter"
+                                        value="0 cm"
+                                        aria-label="Perímetro del rectángulo"
+                                        readonly />
+                                    <small>Aquí aparecerá el perímetro del rectángulo.</small>
+                                    <label for="rectangle-area">Área</label>
+                                    <input
+                                        type="text"
+                                        id="rectangle-area"
+                                        name="rectangle-area"
+                                        value="0 cm²"
+                                        aria-label="Área del rectángulo"
+                                        readonly />
+                                    <small>Aquí aparecerá el área del rectángulo.</small>
+                                </fieldset>
+                            </form>
+                        </footer>
+                    </article>
+                </div>
+                <div class="grid">
+                    <article>
+                        <header><h3>Cuadrado</h3></header>
+                        <div style="text-align: center">
+                            <img src="img/Square.png" alt="Cuadrado" />
+                        </div>
+                        <hr />
+                        <h4>Ingresa tus datos</h4>
+                        <form id="square-form">
+                            <fieldset>
+                                <label for="square-side-a">Lado (a)</label>
+                                <input
+                                    type="number"
+                                    id="square-side-a"
+                                    name="square-side-a"
+                                    placeholder="Ingresa un número"
+                                    required
+                                    aria-label="Lado del cuadrado" />
+                                <small id="square-side-a-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                            </fieldset>
+                            <fieldset class="grid">
+                                <input type="reset" value="Limpiar" />
+                                <input type="submit" value="¡Calcular resultados!" disabled />
+                            </fieldset>
+                        </form>
+                        <footer>
+                            <form>
+                                <fieldset>
+                                    <label for="square-perimeter">Perímetro</label>
+                                    <input
+                                        type="text"
+                                        id="square-perimeter"
+                                        name="square-perimeter"
+                                        value="0 cm"
+                                        aria-label="Perímetro del cuadrado"
+                                        readonly />
+                                    <small>Aquí aparecerá el perímetro del cuadrado.</small>
+                                    <label for="square-area">Área</label>
+                                    <input
+                                        type="text"
+                                        id="square-area"
+                                        name="square-area"
+                                        value="0 cm²"
+                                        aria-label="Área del cuadrado"
+                                        readonly />
+                                    <small>Aquí aparecerá el área del cuadrado.</small>
+                                </fieldset>
+                            </form>
+                        </footer>
+                    </article>
+                    <article>
+                        <header><h3>Círculo</h3></header>
+                        <div style="text-align: center">
+                            <img src="img/Circle.png" alt="Círculo" />
+                        </div>
+                        <hr />
+                        <h4>Ingresa tus datos</h4>
+                        <form id="circle-form">
+                            <fieldset>
+                                <label for="circle-side-r">Radio (r)</label>
+                                <input
+                                    type="number"
+                                    id="circle-side-r"
+                                    name="circle-side-r"
+                                    placeholder="Ingresa un número"
+                                    required
+                                    aria-label="Radio del círculo" />
+                                <small id="circle-side-r-invalid-helper" style="display: none">
+                                    ¡Por favor, proporciona un valor válido!
+                                </small>
+                            </fieldset>
+                            <fieldset class="grid">
+                                <input type="reset" value="Limpiar" />
+                                <input type="submit" value="¡Calcular resultados!" disabled />
+                            </fieldset>
+                        </form>
+                        <footer>
+                            <form>
+                                <fieldset>
+                                    <label for="circle-perimeter">Perímetro</label>
+                                    <input
+                                        type="text"
+                                        id="circle-perimeter"
+                                        name="circle-perimeter"
+                                        value="0 cm"
+                                        aria-label="Perímetro del círculo"
+                                        readonly />
+                                    <small>Aquí aparecerá el perímetro del círculo.</small>
+                                    <label for="circle-area">Área</label>
+                                    <input
+                                        type="text"
+                                        id="circle-area"
+                                        name="circle-area"
+                                        value="0 cm²"
+                                        aria-label="Área del círculo"
+                                        readonly />
+                                    <small>Aquí aparecerá el área del círculo.</small>
+                                </fieldset>
+                            </form>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <script src="js/app.js"></script>
+        <script src="js/math.js"></script>
+    </body>
+</html>

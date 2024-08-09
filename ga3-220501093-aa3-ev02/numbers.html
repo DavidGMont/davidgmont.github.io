@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Organizador de Números</title>
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+        <meta name="description" content="Ingresa y ordena hasta 10 números en tiempo real" />
+
+        <meta property="og:title" content="Organizador de Números" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://davidgarmo.me/" />
+        <meta property="og:image" content="img/Numbers.webp" />
+        <meta property="og:image:alt" content="Imagen de un hombre de finanzas" />
+
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="icon.png" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <meta name="theme-color" content="#fafafa" />
+    </head>
+
+    <body>
+        <main class="container">
+            <nav aria-label="breadcrumb">
+                <ul>
+                    <li><a href="./index.html">Index</a></li>
+                    <li>Organizador de Números</li>
+                </ul>
+            </nav>
+            <hgroup>
+                <h1>Organizador de Números</h1>
+                <p>¡Ingresa tus números ascendentemente y júntalos en una sola lista!</p>
+            </hgroup>
+            <section>
+                <article>
+                    <header><h2>Completa ambos vectores</h2></header>
+                    <div style="text-align: center">
+                        <img
+                            src="img/Numbers.webp"
+                            alt="Hombre de finanzas"
+                            width="1920"
+                            height="1080" />
+                    </div>
+                    <hr />
+                    <form id="vector-form">
+                        <div class="grid">
+                            <fieldset id="first-vector">
+                                <legend>
+                                    <span style="font-size: 1.25rem; font-weight: bold"
+                                        >Primer Vector</span
+                                    >
+                                </legend>
+                                <label for="value-1">Valor #1</label>
+                                <input
+                                    type="number"
+                                    id="value-1"
+                                    name="value-1"
+                                    placeholder="Ingresa un número"
+                                    aria-label="Valor #1" />
+                                <small id="value-1-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-2">Valor #2</label>
+                                <input
+                                    type="number"
+                                    id="value-2"
+                                    name="value-2"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #2" />
+                                <small id="value-2-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-3">Valor #3</label>
+                                <input
+                                    type="number"
+                                    id="value-3"
+                                    name="value-3"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #3" />
+                                <small id="value-3-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-4">Valor #4</label>
+                                <input
+                                    type="number"
+                                    id="value-4"
+                                    name="value-4"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #4" />
+                                <small id="value-4-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-5">Valor #5</label>
+                                <input
+                                    type="number"
+                                    id="value-5"
+                                    name="value-5"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #5" />
+                                <small id="value-5-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                            </fieldset>
+                            <fieldset id="second-vector">
+                                <legend>
+                                    <span style="font-size: 1.25rem; font-weight: bold"
+                                        >Segundo Vector</span
+                                    >
+                                </legend>
+                                <label for="value-6">Valor #1</label>
+                                <input
+                                    type="number"
+                                    id="value-6"
+                                    name="value-6"
+                                    placeholder="Ingresa un número"
+                                    aria-label="Valor #1" />
+                                <small id="value-6-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-7">Valor #2</label>
+                                <input
+                                    type="number"
+                                    id="value-7"
+                                    name="value-7"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #2" />
+                                <small id="value-7-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-8">Valor #3</label>
+                                <input
+                                    type="number"
+                                    id="value-8"
+                                    name="value-8"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #3" />
+                                <small id="value-8-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-9">Valor #4</label>
+                                <input
+                                    type="number"
+                                    id="value-9"
+                                    name="value-9"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #4" />
+                                <small id="value-9-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                                <label for="value-10">Valor #5</label>
+                                <input
+                                    type="number"
+                                    id="value-10"
+                                    name="value-10"
+                                    placeholder="Ingresa un número"
+                                    disabled
+                                    aria-label="Valor #5" />
+                                <small id="value-10-invalid-helper" style="display: none"
+                                    >¡Por favor, proporciona un número mayor que el campo
+                                    anterior!</small
+                                >
+                            </fieldset>
+                        </div>
+                        <fieldset class="grid">
+                            <input type="reset" value="Limpiar" />
+                            <input type="submit" value="¡Organizar las listas!" disabled />
+                        </fieldset>
+                    </form>
+                    <footer>
+                        <form>
+                            <fieldset>
+                                <label for="merged-vectors">Números organizados</label>
+                                <input
+                                    type="text"
+                                    id="merged-vectors"
+                                    name="merged-vectors"
+                                    value="N/D"
+                                    aria-label="Números organizados"
+                                    readonly />
+                                <small
+                                    >Aquí aparecerán los números ordenados ascendentemente
+                                    ingresados arriba.</small
+                                >
+                            </fieldset>
+                        </form>
+                    </footer>
+                </article>
+            </section>
+        </main>
+        <script src="js/app.js"></script>
+        <script src="js/numbers.js"></script>
+    </body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Clasificador de Edades</title>
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+        <meta name="description" content="Filtra 10 edades en útiles categorías" />
+
+        <meta property="og:title" content="Clasificador de Edades" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://davidgarmo.me/" />
+        <meta property="og:image" content="img/Family.webp" />
+        <meta property="og:image:alt" content="Imagen de una familia asiática" />
+
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="icon.png" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <meta name="theme-color" content="#fafafa" />
+    </head>
+
+    <body>
+        <main class="container">
+            <nav aria-label="breadcrumb">
+                <ul>
+                    <li><a href="./index.html">Index</a></li>
+                    <li>Clasificador de Edades</li>
+                </ul>
+            </nav>
+            <h1>Clasificador de Edades</h1>
+            <section>
+                <hgroup>
+                    <h2>¡Ingresa las edades de las personas!</h2>
+                    <p>
+                        <span style="font-weight: bold">Nota:</span> los campos aceptan números
+                        positivos y enteros.
+                    </p>
+                </hgroup>
+                <article>
+                    <header><h3>Completa el formulario</h3></header>
+                    <div style="text-align: center">
+                        <img src="img/Family.webp" alt="Foto familiar" width="1920" height="1080" />
+                    </div>
+                    <hr />
+                    <h4>Ingresa las edades de tu grupo</h4>
+                    <form id="ages-form">
+                        <fieldset>
+                            <label for="age-1">Edad del integrante #1</label>
+                            <input
+                                type="number"
+                                id="age-1"
+                                name="age-1"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #1" />
+                            <small id="age-1-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-2">Edad del integrante #2</label>
+                            <input
+                                type="number"
+                                id="age-2"
+                                name="age-2"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #2" />
+                            <small id="age-2-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-3">Edad del integrante #3</label>
+                            <input
+                                type="number"
+                                id="age-3"
+                                name="age-3"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #3" />
+                            <small id="age-3-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-4">Edad del integrante #4</label>
+                            <input
+                                type="number"
+                                id="age-4"
+                                name="age-4"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #4" />
+                            <small id="age-4-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-5">Edad del integrante #5</label>
+                            <input
+                                type="number"
+                                id="age-5"
+                                name="age-5"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #5" />
+                            <small id="age-5-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-6">Edad del integrante #6</label>
+                            <input
+                                type="number"
+                                id="age-6"
+                                name="age-6"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #6" />
+                            <small id="age-6-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-7">Edad del integrante #7</label>
+                            <input
+                                type="number"
+                                id="age-7"
+                                name="age-7"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #7" />
+                            <small id="age-7-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-8">Edad del integrante #8</label>
+                            <input
+                                type="number"
+                                id="age-8"
+                                name="age-8"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #8" />
+                            <small id="age-8-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-9">Edad del integrante #9</label>
+                            <input
+                                type="number"
+                                id="age-9"
+                                name="age-9"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #9" />
+                            <small id="age-9-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                            <label for="age-10">Edad del integrante #10</label>
+                            <input
+                                type="number"
+                                id="age-10"
+                                name="age-10"
+                                placeholder="Ingresa un número"
+                                aria-label="Edad del integrante #10" />
+                            <small id="age-10-invalid-helper" style="display: none">
+                                ¡Por favor, proporciona un valor válido! Las edades aceptadas están
+                                entre 1 y 120 años.
+                            </small>
+                        </fieldset>
+                        <fieldset class="grid">
+                            <input type="reset" value="Limpiar" />
+                            <input type="submit" value="¡Calcular resultados!" disabled />
+                        </fieldset>
+                    </form>
+                    <footer>
+                        <form>
+                            <fieldset>
+                                <label for="underage">Menores de edad</label>
+                                <input
+                                    type="text"
+                                    id="underage"
+                                    name="underage"
+                                    value="N/D"
+                                    aria-label="Cantidad de personas menores de edad"
+                                    readonly />
+                                <small
+                                    >Aquí aparecerá la cantidad de personas que tienen entre 1 y 17
+                                    años.</small
+                                >
+                                <label for="adult">Mayores de edad</label>
+                                <input
+                                    type="text"
+                                    id="adult"
+                                    name="adult"
+                                    value="N/D"
+                                    aria-label="Cantidad de personas mayores de edad"
+                                    readonly />
+                                <small
+                                    >Aquí aparecerá la cantidad de personas que tienen entre 18 y 59
+                                    años.</small
+                                >
+                                <label for="senior">Adultos mayores</label>
+                                <input
+                                    type="text"
+                                    id="senior"
+                                    name="senior"
+                                    value="N/D"
+                                    aria-label="Cantidad de personas adultas mayores"
+                                    readonly />
+                                <small
+                                    >Aquí aparecerá la cantidad de personas que tienen entre 60 y
+                                    120 años.</small
+                                >
+                                <label for="youngest">Edad más baja</label>
+                                <input
+                                    type="text"
+                                    id="youngest"
+                                    name="youngest"
+                                    value="N/D"
+                                    aria-label="Edad más baja del grupo"
+                                    readonly />
+                                <small>Aquí aparecerá la edad más baja del grupo.</small>
+                                <label for="oldest">Edad más alta</label>
+                                <input
+                                    type="text"
+                                    id="oldest"
+                                    name="oldest"
+                                    value="N/D"
+                                    aria-label="Edad más alta del grupo"
+                                    readonly />
+                                <small>Aquí aparecerá la edad más alta del grupo.</small>
+                                <label for="average">Promedio de edades</label>
+                                <input
+                                    type="text"
+                                    id="average"
+                                    name="average"
+                                    value="N/D"
+                                    aria-label="Promedio de edades del grupo"
+                                    readonly />
+                                <small>Aquí aparecerá el promedio de edades del grupo.</small>
+                            </fieldset>
+                        </form>
+                    </footer>
+                </article>
+            </section>
+        </main>
+        <script src="js/app.js"></script>
+        <script src="js/ages.js"></script>
+    </body>
+</html>
