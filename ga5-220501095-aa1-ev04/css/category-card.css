@@ -1,0 +1,22 @@
+.category-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    margin-right: var(--pico-spacing);
+
+    img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    figcaption {
+        padding: 0.5rem;
+
+        hgroup {
+            margin-bottom: 0;
+        }
+    }
+}

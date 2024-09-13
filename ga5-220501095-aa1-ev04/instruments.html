@@ -1,0 +1,601 @@
+<!doctype html>
+<html class="no-js" lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Instrumentos | SoundSeeker | Reservá tu melodía perfecta</title>
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/category-card.css" />
+        <link rel="stylesheet" href="css/product-card.css" />
+        <link rel="stylesheet" href="css/products-grid.css" />
+        <meta name="description" content="SoundSeeker | Reservá tu melodía perfecta" />
+
+        <meta property="og:title" content="SoundSeeker | Reservá tu melodía perfecta" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://davidgarmo.me/" />
+        <meta property="og:image" content="img/drums.webp" />
+        <meta property="og:image:alt" content="Baterías" />
+
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+        <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="./icon.png" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <meta name="theme-color" content="#fafafa" />
+    </head>
+
+    <body>
+        <header class="container">
+            <a href="./index.html">
+                <hgroup>
+                    <h2><span style="color: var(--pico-primary)">Sound</span>Seeker</h2>
+                    <p>Reservá tu melodía perfecta</p>
+                </hgroup>
+            </a>
+            <nav>
+                <ul style="align-items: baseline">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./instruments.html" class="active">Instrumentos</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li>
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Buscar..."
+                            aria-label="Search" />
+                    </li>
+                    <li>
+                        <a href="./register.html" role="button" tabindex="0" class="primary"
+                            >¡Regístrate!</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <section>
+                <article>
+                    <hgroup style="text-align: center">
+                        <h3>Encuentra tu instrumento favorito ¡ya!</h3>
+                        <p>Explora nuestro amplio catálogo de posibilidades.</p>
+                    </hgroup>
+                    <form>
+                        <fieldset class="grid" style="align-items: end; margin-bottom: 0">
+                            <div>
+                                <label for="category-selection">Categoría</label>
+                                <select
+                                    id="category-selection"
+                                    aria-label="Selecciona una categoría">
+                                    <option selected disabled>Selecciona una categoría...</option>
+                                    <option>Acordeones</option>
+                                    <option>Baterías</option>
+                                    <option>Guitarras y Cuerdas</option>
+                                    <option>Percusión</option>
+                                    <option>Pianos</option>
+                                    <option>Teclados</option>
+                                    <option>Vientos</option>
+                                    <option>Violines y Violas</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="start-date">Fecha de inicio</label>
+                                <input
+                                    type="date"
+                                    id="start-date"
+                                    name="start-date"
+                                    aria-label="Fecha de inicio" />
+                            </div>
+                            <div>
+                                <label for="end-date">Fecha de terminación</label>
+                                <input
+                                    type="date"
+                                    id="end-date"
+                                    name="end-date"
+                                    aria-label="Fecha de terminación" />
+                            </div>
+                            <input type="submit" value="¡Ver opciones!" />
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+            <section>
+                <hgroup>
+                    <h2>Nuestros instrumentos</h2>
+                    <p>¡Explora y encuentra tu musa!</p>
+                </hgroup>
+                <!-- Skeletons -->
+                <div id="recommended-products-skeletons" class="grid">
+                    <aside style="grid-row-start: 1; grid-row-end: span 3">
+                        <article>
+                            <header>
+                                <hgroup style="margin-bottom: 0">
+                                    <h4>Filtros avanzados</h4>
+                                    <p>Encuentra tu instrumento ideal</p>
+                                </hgroup>
+                            </header>
+                            <form>
+                                <details open>
+                                    <summary>Categoría</summary>
+                                    <fieldset>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-accordion"
+                                                name="category-accordion"
+                                                checked />Acordeones
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-drums"
+                                                name="category-drums" />Baterías
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-guitar"
+                                                name="category-guitar"
+                                                checked />Guitarras y Cuerdas
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-percussion"
+                                                name="category-percussion"
+                                                checked />Percusión
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-piano"
+                                                name="category-piano"
+                                                checked />Pianos
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-keyboard"
+                                                name="category-keyboard" />Teclados
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-flute"
+                                                name="category-flute"
+                                                checked />Vientos
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="category-violin"
+                                                name="category-violin"
+                                                checked />Violines y Violas
+                                        </label>
+                                    </fieldset>
+                                </details>
+                                <details open>
+                                    <summary>Marca</summary>
+                                    <fieldset>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-armstrong"
+                                                name="brand-armstrong"
+                                                checked />Armstrong
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-bach"
+                                                name="brand-bach"
+                                                checked />Bach
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-conn-selmer"
+                                                name="brand-conn-selmer"
+                                                checked />Conn-Selmer
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-cort"
+                                                name="brand-cort"
+                                                checked />Cort
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-hohner"
+                                                name="brand-hohner"
+                                                checked />Hohner
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-kalani"
+                                                name="brand-kalani"
+                                                checked />Kalani
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-kurzweil"
+                                                name="brand-kurzweil"
+                                                checked />Kurzweil
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-tycoon"
+                                                name="brand-tycoon"
+                                                checked />Tycoon
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                id="brand-verona"
+                                                name="brand-verona"
+                                                checked />Verona
+                                        </label>
+                                    </fieldset>
+                                </details>
+                                <details open>
+                                    <summary>Rango de precio</summary>
+                                    <fieldset>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-all"
+                                                name="price"
+                                                value="all"
+                                                checked />Todos los precios
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-0-100"
+                                                name="price"
+                                                value="0-100" />$ 0 - $ 100
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-100-500"
+                                                name="price"
+                                                value="100-500" />$ 100 - $ 500
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-500-1000"
+                                                name="price"
+                                                value="500-1000" />$ 500 - $ 1000
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-1000-5000"
+                                                name="price"
+                                                value="1000-5000" />$ 1,000 - $ 5,000
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-5000-10000"
+                                                name="price"
+                                                value="5000-10000" />$ 5,000 - $ 10,000
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="price-10000-"
+                                                name="price"
+                                                value="10000-" />$ 10,000 en adelante
+                                        </label>
+                                    </fieldset>
+                                </details>
+                                <details open>
+                                    <summary>Calificación</summary>
+                                    <fieldset>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="rating-all"
+                                                name="rating"
+                                                value="all"
+                                                checked />Todas las calificaciones
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="rating-1"
+                                                name="rating"
+                                                value="1" />1 estrella
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="rating-2"
+                                                name="rating"
+                                                value="2" />2 estrellas
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="rating-3"
+                                                name="rating"
+                                                value="3" />3 estrellas
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="rating-4"
+                                                name="rating"
+                                                value="4" />4 estrellas
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="rating-5"
+                                                name="rating"
+                                                value="5" />5 estrellas
+                                        </label>
+                                    </fieldset>
+                                </details>
+                                <details open>
+                                    <summary>Ordenar por</summary>
+                                    <fieldset>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="sort-price-asc"
+                                                name="sort-price"
+                                                value="asc"
+                                                checked />Precio ascendente
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="sort-price-desc"
+                                                name="sort-price"
+                                                value="desc" />Precio descendente
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="sort-rating-asc"
+                                                name="sort-rating"
+                                                value="asc" />Calificación ascendente
+                                        </label>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                id="sort-rating-desc"
+                                                name="sort-rating"
+                                                value="desc"
+                                                checked />Calificación descendente
+                                        </label>
+                                    </fieldset>
+                                </details>
+                                <footer>
+                                    <fieldset class="grid" style="margin-bottom: 0">
+                                        <input
+                                            type="reset"
+                                            value="Reiniciar filtros"
+                                            style="margin-bottom: calc(var(--pico-spacing) / 2)" />
+                                        <input
+                                            type="submit"
+                                            value="¡Aplicar filtros!"
+                                            style="margin-bottom: calc(var(--pico-spacing) / 2)" />
+                                    </fieldset>
+                                </footer>
+                            </form>
+                        </article>
+                    </aside>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="product-card skeleton">
+                        <header>
+                            <div class="skeleton-category"></div>
+                            <div class="skeleton-title"></div>
+                        </header>
+                        <div class="skeleton-img"></div>
+                        <footer class="grid">
+                            <div role="button" class="secondary outline" title="Precio">
+                                <div class="skeleton-price"></div>
+                            </div>
+                            <div role="button" title="Alquilar">
+                                <div class="skeleton-price"></div>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./instruments.html" class="active">Instrumentos</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li><a href="#">Políticas</a></li>
+                </ul>
+            </nav>
+            <a href="./index.html">
+                <hgroup>
+                    <h2><span style="color: var(--pico-primary)">Sound</span>Seeker</h2>
+                    <p>Reservá tu melodía perfecta</p>
+                </hgroup>
+            </a>
+            <p>© 2024 SoundSeeker. Todos los derechos reservados.</p>
+        </footer>
+        <script src="js/app.js"></script>
+    </body>
+</html>

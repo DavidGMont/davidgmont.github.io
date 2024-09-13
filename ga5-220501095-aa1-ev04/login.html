@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Inicia sesión | SoundSeeker | Reservá tu melodía perfecta</title>
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/limit.css" />
+        <meta name="description" content="SoundSeeker | Reservá tu melodía perfecta" />
+
+        <meta property="og:title" content="SoundSeeker | Reservá tu melodía perfecta" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://davidgarmo.me/" />
+        <meta property="og:image" content="img/drums.webp" />
+        <meta property="og:image:alt" content="Baterías" />
+
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+        <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="./icon.png" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <meta name="theme-color" content="#fafafa" />
+    </head>
+
+    <body>
+        <header class="container">
+            <a href="./index.html">
+                <hgroup>
+                    <h2><span style="color: var(--pico-primary)">Sound</span>Seeker</h2>
+                    <p>Reservá tu melodía perfecta</p>
+                </hgroup>
+            </a>
+            <nav>
+                <ul style="align-items: baseline">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./instruments.html">Instrumentos</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li>
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Buscar..."
+                            aria-label="Search" />
+                    </li>
+                    <li>
+                        <a href="./register.html" role="button" tabindex="0" class="primary"
+                            >¡Regístrate!</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="limit">
+                <article id="form-container">
+                    <header>
+                        <hgroup style="margin-bottom: 0">
+                            <h2>¡Inicia sesión ahora!</h2>
+                            <p>Accede a un catálogo lleno de posibilidades.</p>
+                        </hgroup>
+                    </header>
+                    <form id="login-form">
+                        <fieldset>
+                            <label for="login-email">Correo electrónico</label>
+                            <input
+                                type="email"
+                                id="login-email"
+                                name="login-email"
+                                placeholder="Ingresa tu correo electrónico"
+                                required
+                                aria-label="Correo electrónico" />
+                            <small id="login-email-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa un correo electrónico válido!
+                            </small>
+                            <label for="login-password">Contraseña</label>
+                            <input
+                                type="password"
+                                id="login-password"
+                                name="login-password"
+                                placeholder="Ingresa tu contraseña"
+                                required
+                                aria-label="Contraseña" />
+                            <small id="login-password-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa una contraseña válida!
+                            </small>
+                        </fieldset>
+                        <fieldset class="grid">
+                            <input
+                                type="submit"
+                                value="¿Olvidaste tu contraseña?"
+                                class="outline" />
+                            <input type="submit" value="¡Iniciar sesión!" />
+                        </fieldset>
+                    </form>
+                    <footer>
+                        <p
+                            style="
+                                text-align: center;
+                                margin-bottom: calc(var(--pico-typography-spacing-vertical) / 2);
+                            ">
+                            ¿No tienes una cuenta? <a href="./register.html">¡Regístrate aquí!</a>
+                        </p>
+                    </footer>
+                </article>
+            </section>
+        </main>
+        <footer class="container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./instruments.html">Instrumentos</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li><a href="#">Políticas</a></li>
+                </ul>
+            </nav>
+            <a href="./index.html">
+                <hgroup>
+                    <h2><span style="color: var(--pico-primary)">Sound</span>Seeker</h2>
+                    <p>Reservá tu melodía perfecta</p>
+                </hgroup>
+            </a>
+            <p>© 2024 SoundSeeker. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

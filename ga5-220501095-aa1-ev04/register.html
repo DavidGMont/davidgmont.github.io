@@ -1,0 +1,312 @@
+<!doctype html>
+<html class="no-js" lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Inicia sesión | SoundSeeker | Reservá tu melodía perfecta</title>
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/limit.css" />
+        <meta name="description" content="SoundSeeker | Reservá tu melodía perfecta" />
+
+        <meta property="og:title" content="SoundSeeker | Reservá tu melodía perfecta" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://davidgarmo.me/" />
+        <meta property="og:image" content="img/drums.webp" />
+        <meta property="og:image:alt" content="Baterías" />
+
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+        <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="./icon.png" />
+
+        <link rel="manifest" href="site.webmanifest" />
+        <meta name="theme-color" content="#fafafa" />
+    </head>
+
+    <body>
+        <header class="container">
+            <a href="./index.html">
+                <hgroup>
+                    <h2><span style="color: var(--pico-primary)">Sound</span>Seeker</h2>
+                    <p>Reservá tu melodía perfecta</p>
+                </hgroup>
+            </a>
+            <nav>
+                <ul style="align-items: baseline">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./instruments.html">Instrumentos</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li>
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Buscar..."
+                            aria-label="Search" />
+                    </li>
+                    <li>
+                        <a href="./register.html" role="button" tabindex="0" class="primary"
+                            >¡Regístrate!</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="limit">
+                <article id="form-container">
+                    <header>
+                        <hgroup style="margin-bottom: 0">
+                            <h2>¡Regístrate ya!</h2>
+                            <p>Estás a un formulario de distancia.</p>
+                        </hgroup>
+                    </header>
+                    <form id="register-form">
+                        <fieldset>
+                            <legend>
+                                <span style="font-size: 1.25rem; font-weight: bold">
+                                    Datos personales
+                                </span>
+                            </legend>
+                            <label for="register-first-name">Nombre(s)</label>
+                            <input
+                                type="text"
+                                id="register-first-name"
+                                name="register-first-name"
+                                placeholder="Ingresa tu(s) nombre(s)"
+                                required
+                                aria-label="Nombre(s)" />
+                            <small id="register-first-name-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa nombres válidos!
+                            </small>
+                            <label for="register-last-name">Apellido(s)</label>
+                            <input
+                                type="text"
+                                id="register-last-name"
+                                name="register-last-name"
+                                placeholder="Ingresa tu(s) apellido(s)"
+                                required
+                                aria-label="Apellido(s)" />
+                            <small id="register-last-name-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa apellidos válidos!
+                            </small>
+                            <label for="register-document-type">Tipo de documento</label>
+                            <select
+                                id="register-document-type"
+                                name="register-document-type"
+                                required>
+                                <option selected disabled value="">
+                                    Selecciona tu tipo de documento...
+                                </option>
+                                <option value="cc">Cédula de Ciudadanía (CC)</option>
+                                <option value="ce">Cédula de Extranjería (CE)</option>
+                                <option value="ti">Tarjera de Identidad (TI)</option>
+                                <option value="pep">Permiso Especial de Permanencia (PEP)</option>
+                                <option value="ppt">Permiso por Protección Temporal (PPT)</option>
+                            </select>
+                            <small id="register-document-type-invalid-helper" style="display: none">
+                                ¡Por favor, selecciona un tipo de documento!
+                            </small>
+                            <label for="id-info">Número de documento</label>
+                            <input
+                                type="number"
+                                id="id-info"
+                                name="id-info"
+                                placeholder="Ingresa un tu número de documento"
+                                required
+                                aria-label="Número de documento" />
+                            <small id="id-info-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa un número de documento válido!
+                            </small>
+                            <label for="date-of-birth">Fecha de nacimiento</label>
+                            <input
+                                type="date"
+                                id="date-of-birth"
+                                name="date-of-birth"
+                                placeholder="Ingresa tu fecha de nacimiento"
+                                required
+                                aria-label="Fecha de nacimiento" />
+                            <small id="date-of-birth-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa una fecha de nacimiento válida!
+                            </small>
+                        </fieldset>
+                        <hr />
+                        <fieldset>
+                            <legend>
+                                <span style="font-size: 1.25rem; font-weight: bold">
+                                    Datos de acceso
+                                </span>
+                            </legend>
+                            <label for="register-email">Correo electrónico</label>
+                            <input
+                                type="email"
+                                id="register-email"
+                                name="register-email"
+                                placeholder="Ingresa tu correo electrónico"
+                                required
+                                aria-label="Correo electrónico" />
+                            <small id="register-email-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa un correo electrónico válido!
+                            </small>
+                            <label for="register-reenter-email">Confirmar correo electrónico</label>
+                            <input
+                                type="email"
+                                id="register-reenter-email"
+                                name="register-reenter-email"
+                                placeholder="Confirma tu correo electrónico"
+                                required
+                                aria-label="Confirmar correo electrónico" />
+                            <small id="register-reenter-email-invalid-helper" style="display: none">
+                                Los correos electrónicos no coinciden ¡Por favor, verifícala!
+                            </small>
+                            <label for="register-password">Contraseña</label>
+                            <input
+                                type="password"
+                                id="register-password"
+                                name="register-password"
+                                placeholder="Ingresa tu contraseña"
+                                required
+                                aria-label="Contraseña" />
+                            <small id="register-password-invalid-helper" style="display: none">
+                                ¡Por favor, ingresa una contraseña válida!
+                            </small>
+                            <div id="register-password-validations">
+                                <p
+                                    style="
+                                        display: grid;
+                                        grid-template-columns: repeat(5, 1fr);
+                                        margin-bottom: calc(
+                                            var(--pico-typography-spacing-vertical) / 2
+                                        );
+                                    ">
+                                    <span
+                                        id="uppercase"
+                                        style="display: flex; justify-content: center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            style="
+                                                max-width: 1rem;
+                                                color: var(--pico-secondary-background);
+                                            ">
+                                            <path
+                                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                        </svg>
+                                        &nbsp;ABC
+                                    </span>
+                                    <span
+                                        id="lowercase"
+                                        style="display: flex; justify-content: center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            style="
+                                                max-width: 1rem;
+                                                color: var(--pico-secondary-background);
+                                            ">
+                                            <path
+                                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                        </svg>
+                                        &nbsp;abc
+                                    </span>
+                                    <span
+                                        id="number"
+                                        style="display: flex; justify-content: center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            style="
+                                                max-width: 1rem;
+                                                color: var(--pico-secondary-background);
+                                            ">
+                                            <path
+                                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                        </svg>
+                                        &nbsp;123
+                                    </span>
+                                    <span
+                                        id="special-char"
+                                        style="display: flex; justify-content: center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            style="
+                                                max-width: 1rem;
+                                                color: var(--pico-secondary-background);
+                                            ">
+                                            <path
+                                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                        </svg>
+                                        &nbsp;@#$
+                                    </span>
+                                    <span
+                                        id="length"
+                                        style="display: flex; justify-content: center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512"
+                                            style="
+                                                max-width: 1rem;
+                                                color: var(--pico-secondary-background);
+                                            ">
+                                            <path
+                                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                        </svg>
+                                        &nbsp;8~30
+                                    </span>
+                                </p>
+                            </div>
+                            <label for="register-reenter-password">Confirmar contraseña</label>
+                            <input
+                                type="password"
+                                id="register-reenter-password"
+                                name="register-reenter-password"
+                                placeholder="Confirma tu contraseña"
+                                required
+                                aria-label="Confirmar contraseña" />
+                            <small
+                                id="register-reenter-password-invalid-helper"
+                                style="display: none">
+                                Las contraseñas no coinciden ¡Por favor, verifícala!
+                            </small>
+                        </fieldset>
+                        <fieldset class="grid">
+                            <input
+                                type="reset"
+                                class="secondary outline"
+                                value="Empezar de cero"
+                                style="margin-bottom: 0" />
+                            <input type="submit" value="¡Registrarme!" style="margin-bottom: 0" />
+                        </fieldset>
+                    </form>
+                    <footer>
+                        <p
+                            style="
+                                text-align: center;
+                                margin-bottom: calc(var(--pico-typography-spacing-vertical) / 2);
+                            ">
+                            ¿Ya tienes una cuenta? <a href="./login.html">¡Inicia sesión aquí!</a>
+                        </p>
+                    </footer>
+                </article>
+            </section>
+        </main>
+        <footer class="container">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./instruments.html">Instrumentos</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li><a href="#">Políticas</a></li>
+                </ul>
+            </nav>
+            <a href="./index.html">
+                <hgroup>
+                    <h2><span style="color: var(--pico-primary)">Sound</span>Seeker</h2>
+                    <p>Reservá tu melodía perfecta</p>
+                </hgroup>
+            </a>
+            <p>© 2024 SoundSeeker. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

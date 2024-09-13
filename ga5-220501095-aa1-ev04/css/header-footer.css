@@ -1,0 +1,28 @@
+body {
+    > header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > a {
+            text-decoration: none;
+            > hgroup {
+                margin-bottom: 0;
+            }
+        }
+    }
+    > footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > a {
+            text-decoration: none;
+            > hgroup {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.active {
+    font-weight: 600;
+}
